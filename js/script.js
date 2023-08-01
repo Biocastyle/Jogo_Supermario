@@ -1,6 +1,6 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
-const elemento = document.querySelector('#contador')
+const elemento = document.querySelector('#contador');
 let contador = 0;
 
 
@@ -46,15 +46,15 @@ const loop = setInterval(() => {
 }, 10);
 
 
-const reset = () =>{
-    pipe.style.animation = 'pipe-animation 1.5s infinite linear';
-    pipe.style.left =//Colocar o certo
+// const reset = () =>{
+//     pipe.style.animation = 'pipe-animation 1.5s infinite linear';
+//     pipe.style.left =//Colocar o certo
 
-    mario.style.animation = '' //olhar qual a condição certa
-    mario.style.bottom ='0px'
+//     mario.style.animation = '' //olhar qual a condição certa
+//     mario.style.bottom ='0px'
 
-    mario.src = '../img/mario.gif';
+//     mario.src = '../img/mario.gif';
    
-}
+// }
 
-document.addEventListener('keydown', jump)
+document.addEventListener('keydown', jump);
