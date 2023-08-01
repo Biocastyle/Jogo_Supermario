@@ -40,7 +40,7 @@
     width: 70px;
     animation: pipe-animation 1.5s infinite linear;
 }
-
+/*Revisar como alterar para celular, pois ficou jogavem mas precisa aperfeiçõar*/
 @media (max-width: 600px){
     .pipe{
         animation: pipe-animation 1s infinite linear;
