@@ -42,7 +42,6 @@ const loop = setInterval(() => {
         // else{
         //     element.innerHTML = `<p>${contador}</p>`;
         // }
-    }
 
 }, 10);
 
