@@ -3,6 +3,8 @@ const pipe = document.querySelector('.pipe');
 const elemento = document.querySelector('#contador')
 let contador = 0;
 
+document.addEventListener('keydown', jump)
+
 const jump = () => {
     mario.classList.add('jump')
     setTimeout(() => {
@@ -11,11 +13,15 @@ const jump = () => {
 
 }
 
-var loop = setInterval(() => {
+const loop = setInterval(() => {
     const x = 0;
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
-    elemento.innerHTML = `<p>${contador++}</p>`;
+    
+    element.innerHTML = `<p>${contador++}</p>`;
+
+    // contador++;
+    
 
         if (pipePosition <= 110 && pipePosition > 0 && marioPosition < 100) {
 
@@ -29,10 +35,26 @@ var loop = setInterval(() => {
             mario.style.width ='75px';
             mario.style.marginLeft ='50px';
 
-            clearInterval(loop)
+            // element.innerHTML = `<p>${contador}</p>`;
 
+            clearInterval(loop);
+        }
+
+        // else{
+        //     element.innerHTML = `<p>${contador}</p>`;
+        // }
     }
 
 }, 10);
 
-document.addEventListener('keydown', jump)
+const reset = () =>{
+    pipe.style.animation = 'pipe-animation 1.5s infinite linear';
+    pipe.style.left =//Colocar o certo
+
+    mario.style.animation = '' //olhar qual a condição certa
+    mario.style.bottom ='0px'
+
+    mario.src = '../img/mario.gif';
+    
+    
+}
