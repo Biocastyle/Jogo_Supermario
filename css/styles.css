@@ -43,7 +43,7 @@
 
 @media (max-width: 600px){
     .pipe{
-        animation: 0.5s infinite linear;
+        animation: 1s infinite linear;
     }
 }
 
