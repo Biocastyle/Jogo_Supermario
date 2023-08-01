@@ -3,7 +3,6 @@ const pipe = document.querySelector('.pipe');
 const elemento = document.querySelector('#contador')
 let contador = 0;
 
-document.addEventListener('keydown', jump)
 
 const jump = () => {
     mario.classList.add('jump')
@@ -18,7 +17,7 @@ const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
     const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
     
-    element.innerHTML = `<p>${contador++}</p>`;
+    element.innerHTML = `<p>${contador++}</p>`
 
     // contador++;
     
@@ -47,6 +46,7 @@ const loop = setInterval(() => {
 
 }, 10);
 
+
 const reset = () =>{
     pipe.style.animation = 'pipe-animation 1.5s infinite linear';
     pipe.style.left =//Colocar o certo
@@ -55,6 +55,7 @@ const reset = () =>{
     mario.style.bottom ='0px'
 
     mario.src = '../img/mario.gif';
-    
-    
+   
 }
+
+document.addEventListener('keydown', jump)
