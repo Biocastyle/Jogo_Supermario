@@ -58,6 +58,17 @@
     animation: clouds-animation 15s infinite linear;
 }
 
+@media (max-width: 300px){
+    .pipe{
+        animation: pipe-animation 0.9 infinite linear;
+    }
+
+    .jump{
+        animation: jump 800ms ease-out;
+    }
+}
+
+
 
 /*Animações*/
 @keyframes jump {
