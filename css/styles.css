@@ -1,4 +1,3 @@
-
 * {
     margin: 0px;
     padding: 0px;
@@ -58,13 +57,13 @@
     animation: clouds-animation 15s infinite linear;
 }
 
-@media (min-width: 300px){
-    .pipe{
-        animation: pipe-animation 0.5 infinite linear;
+@media (max-width: 600px) {
+    .pipe {
+        animation: pipe-animation 0.9s infinite linear;
     }
 
-    .jump{
-        animation: jump 800ms ease-out;
+    .jump {
+        animation: jump 500ms ease-out;
     }
 }
 
@@ -112,6 +111,3 @@
         right: 100%;
     }
 }
-
-
-
