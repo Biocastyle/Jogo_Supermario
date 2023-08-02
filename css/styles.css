@@ -58,7 +58,7 @@
     animation: clouds-animation 15s infinite linear;
 }
 
-@media (max-width: 300px){
+@media (min-width: 300px){
     .pipe{
         animation: pipe-animation 0.5 infinite linear;
     }
