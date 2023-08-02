@@ -1,9 +1,5 @@
-const mario = document.querySelector('.mario');
-const pipe = document.querySelector('.pipe');
-const elemento = document.querySelector('#contador');
-let contador = 0;
-
-
+const mario = document.querySelector('.mario')
+const pipe = document.querySelector('.pipe')
 const jump = () => {
     mario.classList.add('jump')
     setTimeout(() => {
@@ -12,37 +8,25 @@ const jump = () => {
 
 }
 
+
 const loop = setInterval(() => {
     const x = 0;
     const pipePosition = pipe.offsetLeft;
-    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '');
-    
-    element.innerHTML = `<p>${contador++}</p>`
+    const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '')
 
-    // contador++;
-    
+    if (pipePosition <= 110 && pipePosition > 0 && marioPosition < 100) {
+        pipe.style.animation = 'none';
+        pipe.style.left = '110px';
+        
+        mario.style.animation = 'none';
+        mario.style.bottom = `${marioPosition}px`;
+        
+        mario.src = './img/game-over.png'
+        mario.style.width ='75px'
+        mario.style.marginLeft ='50px'
 
-        if (pipePosition <= 110 && pipePosition > 0 && marioPosition < 100) {
-
-            pipe.style.animation = 'none';
-            pipe.style.left = '110px';
-            
-            mario.style.animation = 'none';
-            mario.style.bottom = `${marioPosition}px`;
-            
-            mario.src = './img/game-over.png';
-            mario.style.width ='75px';
-            mario.style.marginLeft ='50px';
-
-            // element.innerHTML = `<p>${contador}</p>`;
-
-            clearInterval(loop);
-        }
-
-        // else{
-        //     element.innerHTML = `<p>${contador}</p>`;
-        // }
-
+        clearInterval(loop)
+    }
 }, 10);
 
 
