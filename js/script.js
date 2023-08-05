@@ -5,7 +5,8 @@ const gover = document.querySelector('.gameover')
 const placar = document.querySelector('#contador')
 const placar_over = document.querySelector('#contador_over')
 
-let contador =0;
+let contador =0;  
+let teste =0;
 
 const jump = () => {
     mario.classList.add('jump')
@@ -15,7 +16,7 @@ const jump = () => {
 
 }
 
-const reset =() => {
+const reset = () => {
         pipe.style.animation = 'pipe-animation 1.5s infinite linear';
         pipe.style.left = '';
 
@@ -34,11 +35,13 @@ const reset =() => {
 
     }
 
-const loop = ()=> {
+const loop = () => {    
+
     const eng = setInterval(() => {
         const pipePosition = pipe.offsetLeft;
         const marioPosition = +window.getComputedStyle(mario).bottom.replace('px', '')
         placar.innerHTML = `<p>${contador++}</p>`;
+        
         
         if (pipePosition <= 110 && pipePosition > 0 && marioPosition < 100) {
             pipe.style.animation = 'none';
@@ -57,9 +60,10 @@ const loop = ()=> {
     
             clearInterval(eng);
         }
-    }, 10);
+    }, 1);
 
 }
 
+
 document.addEventListener('load',loop());
-document.addEventListener('keydown', jump());
+document.addEventListener('keydown', jump);

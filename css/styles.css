@@ -19,7 +19,7 @@ body{
     align-items: center;
     flex-direction: column;
     height: 60%;
-    width: 90%;
+    width: 80%;
 
 }
 
@@ -137,9 +137,7 @@ body{
 
 
 
-
-
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     .pipe {
         animation: pipe-animation 0.9s infinite linear;
     }
@@ -148,11 +146,8 @@ body{
         animation: jump 500ms ease-out;
     }
 
-    .gamebord{
-        height: 100vh;
-    }
-
-}
+    
+} */
 
 /*Animações*/
 @keyframes jump {
