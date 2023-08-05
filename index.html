@@ -9,15 +9,29 @@
 </head>
 
 <body>
-    <div class="gamebord" id="jogo" onclick="jump()">
-        <div class="contador">
-            <h1>Pontuacão</h1>
-            <span id="contador"></span>
+    <div class="game">
+        <div class="title">
+            <h1>Super Mario Jump</h1>
         </div>
-        <img src="img/clouds.png" class="clouds" alt="Nuvens">
-        <img src="img/mario.gif" class="mario" alt="Super-Mario">
-        <img src="img/pipe.png" class="pipe" alt="pipe">
+        <div class="gamebord" id="jogo" onclick="jump()">
+            <img src="img/clouds.png" class="clouds" alt="Nuvens">
+            <img src="img/mario.gif" class="mario" alt="Super-Mario">
+            <img src="img/pipe.png" class="pipe" alt="pipe">
+            
+            <div class="menus">
+                <div class="contador">
+                    <h1>Pontuacão</h1>
+                    <span id="contador"></span>
+                </div>
+                <div class="gameover">
+                    <h1>GAME OVER</h1>
+                    <p>Pontuação</p>
+                    <span id="contador_over"></span>
+                    <button class="reset" onclick="reset(),loop()" >Reiniciar</button>
+                </div>
+            </div>
 
+            </div>
     </div>
     <script src="js/script.js" defer></script>
 </body>
